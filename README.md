@@ -1,5 +1,7 @@
 # student2
 学生管理系统(mybaits版)
+ 
+b站：https://www.bilibili.com/video/BV1ng41197RM/?p=4&spm_id_from=pageDriver&vd_source=adfec93694fcaad375a7e872855f4d56
 
 1. 错误总结
     1. 表与类中的某个属性不一致(eg: (user_name/username) &&(company_name/companyName))
