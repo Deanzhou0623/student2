@@ -1,0 +1,7 @@
+druid 连接池技术
+
+1. Spring boot 自动注入中 对datasource configuration 分为
+    - embedded datasource configuration
+    - pooled datasource configuration (优先级更高)
+       - 通过conditionalProperty 看是否有对应对配置项(根据type)
+       - 如果没有则是走 generic的类型
