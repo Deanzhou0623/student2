@@ -50,4 +50,7 @@ b站：https://www.bilibili.com/video/BV1ng41197RM/?p=4&spm_id_from=pageDriver&v
            1. 首次登录后，服务器会生成一个JWT，并将其返回给客户端
            2. 客户端随后在每次请求时将此JWT发送回服务器以验证其身份。
               由于JWT是自验证的，服务器可以快速确认用户身份而无需每次都查询数据库。
-      5. 
+      5. 返回统一结果:
+        包括对象信息以及响应码，目的是返回给前端开发人员
+        interceptor to handle all exceptions
+      6. 

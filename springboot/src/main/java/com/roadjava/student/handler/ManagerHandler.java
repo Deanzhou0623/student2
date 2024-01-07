@@ -5,8 +5,11 @@ package com.roadjava.student.handler;/*
  *@Date:2023-12-28 23:00
  */
 
+import com.roadjava.student.bean.res.Result;
+import com.roadjava.student.bean.vo.JwtManagerVO;
 import com.roadjava.student.request.LoginReq;
 import com.roadjava.student.service.ManagerService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -19,7 +22,7 @@ public class ManagerHandler {
     private ManagerService managerService;
 
     @PostMapping("/login")
-    public String login(@RequestBody  LoginReq loginReq){
+    public Result<JwtManagerVO> login(@RequestBody  @Validated LoginReq loginReq){
         return managerService.login(loginReq);
     }
 }

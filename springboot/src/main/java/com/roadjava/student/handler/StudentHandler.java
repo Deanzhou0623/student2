@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/student")
 public class StudentHandler {
-
     
     /*
     * 根据id查询
