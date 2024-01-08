@@ -7,7 +7,7 @@ package com.roadjava.student.handler;/*
 
 import com.roadjava.student.bean.res.Result;
 import com.roadjava.student.bean.vo.JwtManagerVO;
-import com.roadjava.student.request.LoginReq;
+import com.roadjava.student.bean.request.LoginReq;
 import com.roadjava.student.service.ManagerService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

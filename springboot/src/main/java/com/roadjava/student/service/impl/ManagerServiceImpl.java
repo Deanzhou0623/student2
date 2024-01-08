@@ -13,7 +13,7 @@ import com.roadjava.student.bean.dto.JwtManagerDTO;
 import com.roadjava.student.bean.res.Result;
 import com.roadjava.student.bean.vo.JwtManagerVO;
 import com.roadjava.student.mapper.ManagerMapper;
-import com.roadjava.student.request.LoginReq;
+import com.roadjava.student.bean.request.LoginReq;
 import com.roadjava.student.service.ManagerService;
 import com.roadjava.student.util.JwtUtil;
 import lombok.extern.slf4j.Slf4j;

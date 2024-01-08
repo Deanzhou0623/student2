@@ -1,4 +1,4 @@
-package com.roadjava.student.request;/*
+package com.roadjava.student.bean.request;/*
  *ClassName:LoginReq
  *Description: login request parameters
  *@Author:deanzhou
