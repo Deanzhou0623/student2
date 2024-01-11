@@ -38,4 +38,9 @@ public interface StudentService {
     * update by id
     * */
     void updateById(StudentUpdateReq updateReq);
+
+    /*
+    * select all
+    * */
+    Result<List<StudentVO>> selectAll();
 }

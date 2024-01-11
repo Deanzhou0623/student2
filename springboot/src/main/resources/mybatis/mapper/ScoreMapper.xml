@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roadjava.student.mapper.ScoreMapper">
+
+
+    <resultMap id="ScoreMap" type="ScoreVO">
+        <result column="student_id" property="studentId"></result>
+        <result column="exam_name" property="examName"></result>
+        <result column="student_id" property="studentId"></result>
+        <result column="cn_score" property="cnScore"></result>
+        <result column="en_score" property="enScore"></result>
+        <result column="math_score" property="mathScore"></result>
+    </resultMap>
+    <!--search students by pages-->
+    <select id="queryList" resultMap="ScoreMap">
+        select a.*,
+        b.student_name
+        from score a
+        left join student b on a.student_id=b.id
+        <where>
+            <if test='searchWord != null and searchWord != ""'>
+                b.real_name like concat('%',#{searchWord},'%')
+            </if>
+        </where>
+        order by a.id desc
+    </select>
+</mapper>

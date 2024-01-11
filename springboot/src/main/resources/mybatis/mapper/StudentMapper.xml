@@ -5,5 +5,21 @@
 <mapper namespace="com.roadjava.student.mapper.StudentMapper">
 
 
+    <resultMap id="StudentMap" type="studentVO">
+        <result column="real_name" property="realName"></result>
+        <result column="enroll_name" property="enrollTime"></result>
+    </resultMap>
+
+    <!--search students by pages-->
+    <select id="queryList" resultMap="StudentMap">
+        select a.*
+        from student a
+        <where>
+            <if test='searchWord != null and searchWord != ""'>
+                a.real_name like concat('%',#{searchWord},'%')
+            </if>
+        </where>
+        order by a.id desc
+    </select>
 
 </mapper>

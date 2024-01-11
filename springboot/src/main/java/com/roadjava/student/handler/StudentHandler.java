@@ -74,4 +74,11 @@ public class StudentHandler {
         studentService.updateById(updateReq);
         return Result.buildSuccess("add success");
     }
+
+    /*
+    * select All
+    * */
+    public Result<List<StudentVO>> selectAll(){
+        return studentService.selectAll();
+    }
 }

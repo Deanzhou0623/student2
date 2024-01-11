@@ -102,4 +102,13 @@ public class StudentServiceImpl implements StudentService {
         BeanUtils.copyProperties(updateReq,studentDO);
         studentMapper.updateById(studentDO);
     }
+
+    /*
+    * select ALl
+    * */
+    @Override
+    public Result<List<StudentVO>> selectAll() {
+        List<StudentVO> student= studentMapper.queryList(new CommonSearchReq());
+        return Result.buildSuccess(student);
+    }
 }
